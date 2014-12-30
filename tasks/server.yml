@@ -58,8 +58,8 @@
   copy:
     src=files/sensu/extensions/
     dest=/etc/sensu/extensions/
-    owner=sensu
-    group=sensu
+    owner="{{ sensu_user }}"
+    group="{{ sensu_group }}"
     mode=0750
   notify:
     - restart sensu server
@@ -68,8 +68,8 @@
   copy:
     src=files/sensu/conf.d/
     dest=/etc/sensu/conf.d/
-    owner=sensu
-    group=sensu
+    owner="{{ sensu_user }}"
+    group="{{ sensu_group }}"
     mode=0640
   notify:
     - restart sensu server
