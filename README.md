@@ -32,11 +32,17 @@ Just use Galaxy:
 `sensu_client_subscription_names`|List|List of test to execute on this client| `[test]`
 `sensu_server_redis_host`|String|Hostname of the Redis server|`"127.0.0.1"`
 `sensu_server_api_host`|String|Adress of the Sensu API server|`"127.0.0.1"`
+`sensu_server_rabbitmq_vhost`|String|RabbitMQ virtual host|`"/sensu"`
 `sensu_server_rabbitmq_hostname`|String|Hostname of the RabbitMQ server|`"127.0.0.1"`
+`sensu_server_rabbitmq_port`|Integer|Port of the RabbitMQ server|`5672`
+`sensu_server_rabbitmq_ssl`|String|Enables SSL connection to RabbitMQ|`"false"`
 `sensu_server_rabbitmq_user`|String|Username to connect to RabbitMQ|`"sensu"`
 `sensu_server_rabbitmq_password`|String|Password to connect to RabbitMQ|`"placeholder"`
-`sensu_server_dashboard_host`|String|Hostname of the Sensu Dashboard|`"127.0.0.1`"
-`sensu_server_dashboard_password`|String|Password for the sensu dashboard|`"placeholder"`
+`sensu_server_dashboard_host`|String|The address on which Uchiwa will listen|`"0.0.0.0"`
+`sensu_server_dashboard_port`|String|The port on which Uchiwa will listen|` "3000"`
+`sensu_server_dashboard_user`|String|The username of the Uchiwa dashboard|`"uchiwa"`
+`sensu_server_dashboard_password`|String|The password for the Uchiwa dashboard|`"placeholder"`
+`sensu_server_dashboard_refresh`|Integer|Determines the interval to pull the Sensu APIs, in seconds|`5`
 `sensu_checks`|Complex type|A variable representing the checks configuration. Will be auto converted to JSON|`''`
 `sensu_handlers`|Complex type|A variable representing the handlers configuration. Will be auto converted to JSON|`''`
 `sensu_server_embedded_ruby`|String|Indicate if Sensu should use the embedded Ruby, or the system one|`"true"`
